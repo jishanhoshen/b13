@@ -1,79 +1,108 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-  <title>B Thirteen | Organisation</title>
-  	<meta charset="UTF-8">
-	<meta name="title" content="B Thirteen | Organisation ">
-	<meta name="description" content="B Thirteen is an Organisation where have different types of services for people. such as savings, money transfer, new product auctions etc.|বি থার্টিন একটি সংস্থা যেখানে মানুষের জন্য বিভিন্ন ধরণের পরিষেবা আছে। যেমন সঞ্চয়, অর্থ স্থানান্তর, নতুন পণ্য নিলাম ইত্যাদি।">
-	<meta name="keywords" content="b thirteen, b13, bthirteen, bid, money, money transfer, product auctions, savings">
-	<meta name="robots" content="index, follow">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="language" content="English">
-	<meta name="revisit-after" content="1 days">
-	<meta name="author" content="Sariful Islam">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/style.css" />
-	</head>
-	<body>
+<!DOCTYPE html>
+<html lang="en">
+<?php include('headerlink.php');?>
+<body>
+<?php include('preload.php');?>
+<?php include('header.php');?>
+<?php
+$select_about="select * from bthirteen_about where id = 1";
+$select_about_query=mysqli_query($db,$select_about);
+$select_about_row=mysqli_fetch_assoc($select_about_query);
+    $about_title_echo=$select_about_row['title'];
+    $services_title_a_echo=$select_about_row['titlea'];
+    $bdesc_a_echo=$select_about_row['desca'];
+    $services_title_b_echo=$select_about_row['titleb'];
+    $bdesc_b_echo=$select_about_row['descb'];
+    $services_title_c_echo=$select_about_row['titlec'];
+    $bdesc_c_echo=$select_about_row['descc'];
+    $services_title_d_echo=$select_about_row['titled'];
+    $bdesc_d_echo=$select_about_row['descd'];
+?>
+    <!-- ***** Special Area Start ***** -->
+    <section class="special-area bg-white section_padding_100" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Section Heading Area -->
+                    <div class="section-heading text-center">
+                        <h2><?php echo $about_title_echo?></h2>
+                        <div class="line-shape"></div>
+                    </div>
+                </div>
+            </div>
 
-		<!-- Header -->
-			<header id="header" class="hide">
-				<div class="inner">
-					<div class="content">
-						<h1>B Thirteen</h1>
-						<h2>Welcome To<br />
-						Your Dream Land</h2>
-						<a href="#" class="button big alt"><span>Let's Go</span></a>
-					</div>
-					<a href="https://bthirteen.org" class="button hidden"><span>Let's Go</span></a>
-				</div>
-			</header>
-		<!-- Main -->
-			<div id="main">
-			    <div class="navbar">
-			        <div class="logo"><h1>B thirteen</h1></div>
-			        <div class="menu">
-			            <ul>
-			                <li><a href="https://bthirteen.org">Home</a></li>
-			                <li><a href="about.php">About</a></li>
-			                <li><a href="services.php">Services</a></li>
-			                <li><a href="portfolio.php">Portfolio</a></li>
-			                <li><a href="contact.php">Contact Us</a></li>
-			            </ul>
-			        </div>
-			    </div>
-			    <div class="section" id="home">
-			        <div class="content"><h1>About</h1>
-			        </div>
-			    </div>
-			</div>
-		<!-- Footer -->
-			<footer id="footer">
-				<a href="#" class="info fa fa-info-circle"><span>About</span></a>
-				<div class="inner">
-					<div class="content">
-						<h3>Vestibulum hendrerit tortor id gravida</h3>
-						<p>In tempor porttitor nisl non elementum. Nulla ipsum ipsum, feugiat vitae vehicula vitae, imperdiet sed risus. Fusce sed dictum neque, id auctor felis. Praesent luctus sagittis viverra. Nulla erat nibh, fermentum quis enim ac, ultrices euismod augue. Proin ligula nibh, pretium at enim eget, tempor feugiat nulla.</p>
-					</div>
-					<div class="copyright">
-						<h3>Follow me</h3>
-						<ul class="icons">
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-						</ul>
-						&copy; B Thirteen developers | 2019
-					</div>
-				</div>
-			</footer>
+            <div class="row">
+                <!-- Single Special Area -->
+                <div class="col-12 col-md-4">
+                    <div class="single-special text-center wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="single-icon">
+                            <i class="ti-mobile" aria-hidden="true"></i>
+                        </div>
+                        <h4><?php echo $services_title_a_echo?></h4>
+                        <p><?php echo $bdesc_a_echo?></p>
+                    </div>
+                </div>
+                <!-- Single Special Area -->
+                <div class="col-12 col-md-4">
+                    <div class="single-special text-center wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="single-icon">
+                            <i class="ti-ruler-pencil" aria-hidden="true"></i>
+                        </div>
+                        <h4><?php echo $services_title_b_echo?></h4>
+                        <p><?php echo $bdesc_b_echo?></p>
+                    </div>
+                </div>
+                <!-- Single Special Area -->
+                <div class="col-12 col-md-4">
+                    <div class="single-special text-center wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="single-icon">
+                            <i class="ti-settings" aria-hidden="true"></i>
+                        </div>
+                        <h4><?php echo $services_title_c_echo?></h4>
+                        <p><?php echo $bdesc_c_echo?></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="background: url(mystore/balance.png) center no-repeat;height: 480px;width: 90%;background-size: contain;margin: auto;"></div>
+        <!-- Special Description Area -->
+        <div class="special_description_area mt-150">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="special_description_img">
+                            <img src="mystore/bid.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-5 ml-xl-auto">
+                        <div class="special_description_content">
+                            <h4><?php echo $services_title_d_echo?></h4>
+                            <p><?php echo $bdesc_d_echo?></p>
+                            <div class="app-download-area">
+                                <div class="app-download-btn wow fadeInUp" data-wow-delay="0.2s">
+                                    <!-- Google Store Btn -->
+                                    <a href="#">
+                                        <i class="fa fa-android"></i>
+                                        <p class="mb-0"><span>available on</span> Google Store</p>
+                                    </a>
+                                </div>
+                                <div class="app-download-btn wow fadeInDown" data-wow-delay="0.4s">
+                                    <!-- Apple Store Btn -->
+                                    <a href="#">
+                                        <i class="fa fa-apple"></i>
+                                        <p class="mb-0"><span>Comming Soon</span> Apple Store</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Special Area End ***** -->
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+<?php include('footer.php');?>
+</body>
 
-	</body>
 </html>
